@@ -1,0 +1,29 @@
+--- xbsql-0.11/configure.in.orig	2003-03-28 20:07:30.000000000 +0100
++++ xbsql-0.11/configure.in	2005-02-14 20:54:41.179751330 +0100
+@@ -1,20 +1,13 @@
+ AC_DEFUN(AC_CHECK_CURSES,
+ [
+-	AC_MSG_CHECKING([for (n)curses])
+-
+-	if      test -f /usr/lib/libncurses.so
+-	then
+-		curses=ncurses
+-
+-	elif    test -f /usr/lib/libcurses.so
+-	then
+-		curses=curses
+-	else
+-		AC_MSG_ERROR([No (n)curses installation])
+-	fi
++	AC_CHECK_LIB(ncurses, main, [curses=ncurses],
++		[AC_CHECK_LIB(curses, main, [curses=curses],
++			[AC_MSG_ERROR([No (n)curses installation])]
++		)]
++	)
+ 
+ 	CURSES=$curses
+-	AC_MSG_CHECKING([(n)curses])
++	AC_MSG_CHECKING([for (n)curses])
+ 	AC_MSG_RESULT([$CURSES])
+ 	AC_SUBST(CURSES)
+ ])
