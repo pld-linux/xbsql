@@ -2,13 +2,17 @@ Summary:	XBSQL - an SQL wrapper for the XBase library
 Summary(pl):	XBSQL - wrapper SQL dla biblioteki XBase
 Name:		xbsql
 Version:	0.11
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 # from URL - dead ftp://195.92.31.34/pub/xbsql-0.6/xbsql-0.6.tgz
 Source0:	http://www.rekallrevealed.org/packages/%{name}-%{version}.tgz
 # Source0-md5:	7f8c8584cf0f592660fb2653a4bfc415
+Patch0:		%{name}-acfix.patch
 URL:		http://www.quaking.demon.co.uk/xbsql/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool >= 2:1.5
 BuildRequires:	ncurses-devel
 BuildRequires:	readline-devel
 BuildRequires:	xbase-devel >= 1.8.1
@@ -49,8 +53,13 @@ Statyczna biblioteka XBSQL.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
