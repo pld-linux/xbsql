@@ -12,6 +12,7 @@ Patch0:		%{name}-acfix.patch
 URL:		http://www.quaking.demon.co.uk/xbsql/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	bison
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	ncurses-devel
 BuildRequires:	readline-devel
