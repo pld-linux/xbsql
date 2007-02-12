@@ -1,5 +1,5 @@
 Summary:	XBSQL - an SQL wrapper for the XBase library
-Summary(pl):	XBSQL - wrapper SQL dla biblioteki XBase
+Summary(pl.UTF-8):   XBSQL - wrapper SQL dla biblioteki XBase
 Name:		xbsql
 Version:	0.11
 Release:	3
@@ -23,13 +23,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 XBSQL is a wrapper library which provides an SQL-subset interface to
 XBase DBMS.
 
-%description -l pl
-XBSQL to biblioteka obudowuj±ca dostarczaj±ca interfejs bêd±cy
+%description -l pl.UTF-8
+XBSQL to biblioteka obudowujÄ…ca dostarczajÄ…ca interfejs bÄ™dÄ…cy
 podzbiorem SQL do systemu baz danych XBase.
 
 %package devel
 Summary:	Header files for XBSQL library
-Summary(pl):	Pliki nag³ówkowe biblioteki XBSQL
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki XBSQL
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xbase-devel
@@ -37,19 +37,19 @@ Requires:	xbase-devel
 %description devel
 Header files for XBSQL library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki XBSQL.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki XBSQL.
 
 %package static
 Summary:	Static XBSQL library
-Summary(pl):	Statyczna biblioteka XBSQL
+Summary(pl.UTF-8):   Statyczna biblioteka XBSQL
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static XBSQL library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka XBSQL.
 
 %prep
