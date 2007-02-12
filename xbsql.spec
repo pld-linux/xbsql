@@ -1,5 +1,5 @@
 Summary:	XBSQL - an SQL wrapper for the XBase library
-Summary(pl.UTF-8):   XBSQL - wrapper SQL dla biblioteki XBase
+Summary(pl.UTF-8):	XBSQL - wrapper SQL dla biblioteki XBase
 Name:		xbsql
 Version:	0.11
 Release:	3
@@ -29,7 +29,7 @@ podzbiorem SQL do systemu baz danych XBase.
 
 %package devel
 Summary:	Header files for XBSQL library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki XBSQL
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki XBSQL
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xbase-devel
@@ -42,7 +42,7 @@ Pliki nagłówkowe biblioteki XBSQL.
 
 %package static
 Summary:	Static XBSQL library
-Summary(pl.UTF-8):   Statyczna biblioteka XBSQL
+Summary(pl.UTF-8):	Statyczna biblioteka XBSQL
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
