@@ -2,7 +2,7 @@ Summary:	XBSQL - an SQL wrapper for the XBase library
 Summary(pl.UTF-8):	XBSQL - wrapper SQL dla biblioteki XBase
 Name:		xbsql
 Version:	0.11
-Release:	4
+Release:	5
 License:	LGPL
 Group:		Libraries
 # from URL - dead ftp://195.92.31.34/pub/xbsql-0.6/xbsql-0.6.tgz
@@ -81,6 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS Announce ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/xql
 %attr(755,root,root) %{_libdir}/libxbsql.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libxbsql.so.0
 
 %files devel
 %defattr(644,root,root,755)
